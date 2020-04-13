@@ -35,7 +35,9 @@ class ResultadoActivity : AppCompatActivity() {
 
     private fun atualizarResultadoImc(imc: BigDecimal) {
         textViewResultado.text = imcFormatado(imc)
+        textViewResultado.contentDescription = getString(R.string.label_resultado)+" "+imcFormatado(imc)
         textViewClassificacao.text = classificacao(imc)
+        textViewClassificacao.contentDescription = getString(R.string.label_classificacao)+" "+classificacao(imc)
     }
 
     private fun classificacao(imc: BigDecimal): String {

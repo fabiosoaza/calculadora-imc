@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.accessibility.AccessibilityEvent
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.MessageFormat
@@ -46,19 +48,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validar() : Boolean{
-        if (editIdade.text.toString() == "") {
-            layoutEditIdade.error =  formatarMensagem(this.getString(R.string.label_idade))
-            return false
-        }
-        if (editAltura.text.toString() == "") {
-            layoutEditAltura.error =  formatarMensagem(this.getString(R.string.label_altura))
-            return false
-        }
-        if (editPeso.text.toString() == "") {
-            layoutEditPeso.error =  formatarMensagem(this.getString(R.string.label_peso))
-            return false
-        }
+        return validarCampo(editIdade, layoutEditIdade, this.getString(R.string.label_idade))
+                && validarCampo(editAltura, layoutEditAltura, this.getString(R.string.label_altura))
+                && validarCampo(editPeso, layoutEditPeso, this.getString(R.string.label_peso))
+    }
 
+    private fun validarCampo(editText: TextInputEditText, layoutEditText: TextInputLayout, campo: String ): Boolean {
+        if (editText.text.toString() == "") {
+            layoutEditText.error = formatarMensagem(campo)
+            editText.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
+            editText.requestFocus()
+            return false
+        }
         return true
     }
 

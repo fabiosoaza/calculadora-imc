@@ -11,7 +11,7 @@
     <string name="botao_voltar">Back</string>
     <string name="label_resultado">Your BMI is </string>
     <string name="labelMessageErrorMandatory">Field {0} must be filled</string>
-    <string name="label_classificacao">Classification </string>
+    <string name="label_classificacao">Your Classification is </string>
     <string name="label_resultado_teste">Test Results</string>
 
     <string name="label_magreza">Essential Fat</string>
@@ -19,4 +19,7 @@
     <string name="label_sobrepeso">Overweight</string>
     <string name="label_obesidade">Obesity</string>
     <string name="label_obesidade_grave">Super Obesity</string>
+    <string name="content_description_sexo_masculino">Male Sex</string>
+    <string name="content_description_sexo_feminino">Female Sex</string>
+    <string name="content_description_calcular_imc">Calculate BMI</string>
 </resources>

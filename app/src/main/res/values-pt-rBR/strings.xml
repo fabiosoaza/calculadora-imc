@@ -20,4 +20,10 @@
     <string name="label_sobrepeso">Sobrepeso</string>
     <string name="label_obesidade">Obesidade</string>
     <string name="label_obesidade_grave">Obesidade Grave</string>
+
+    <string name="content_description_sexo_masculino">Sexo Masculino</string>
+    <string name="content_description_sexo_feminino">Sexo Feminino</string>
+    <string name="content_description_calcular_imc">Calcular IMC</string>
+
+
 </resources>

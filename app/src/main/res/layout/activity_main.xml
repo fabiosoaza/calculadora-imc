@@ -28,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/label_sexo"
+        android:labelFor="@id/radioGroup"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="@+id/labelCalculadoraImc"
         app:layout_constraintStart_toStartOf="@+id/labelCalculadoraImc"
         app:layout_constraintTop_toBottomOf="@+id/labelCalculadoraImc" />
@@ -47,6 +49,7 @@
             android:id="@+id/radioSexoMasculino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_sexo_masculino"
             android:text="@string/checkbox_masculino" />
 
         <RadioButton
@@ -54,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/checkbox_feminino"
+            android:contentDescription="@string/content_description_sexo_feminino"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="154dp" />
     </RadioGroup>
@@ -66,6 +70,7 @@
         android:layout_marginTop="16dp"
         android:hint="@string/label_idade"
         app:errorEnabled="true"
+        android:labelFor="@+id/editIdade"
         app:layout_constraintEnd_toEndOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
@@ -90,6 +95,7 @@
         android:layout_marginTop="16dp"
         android:hint="@string/label_altura"
         app:errorEnabled="true"
+        android:labelFor="@+id/editAltura"
         app:layout_constraintEnd_toEndOf="@+id/layoutEditIdade"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/layoutEditIdade"
@@ -111,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/label_peso"
+        android:labelFor="@+id/editPeso"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/layoutEditAltura"
         app:layout_constraintHorizontal_bias="0.0"
@@ -134,6 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/botao_calcular"
+        android:contentDescription="@string/content_description_calcular_imc"
         app:layout_constraintEnd_toEndOf="@+id/layoutEditPeso"
         app:layout_constraintStart_toStartOf="@+id/layoutEditPeso"
         app:layout_constraintTop_toBottomOf="@+id/layoutEditPeso" />
