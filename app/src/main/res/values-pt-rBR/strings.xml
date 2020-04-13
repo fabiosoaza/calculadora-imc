@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="label_calcular_imc">Calcular IMC</string>
+    <string name="label_sexo">Sexo</string>
+    <string name="checkbox_masculino">Masculino</string>
+    <string name="checkbox_feminino">Feminino</string>
+    <string name="label_idade">Idade</string>
+    <string name="label_altura">Altura</string>
+    <string name="label_peso">Peso</string>
+    <string name="botao_calcular">Calcular</string>
+    <string name="botao_voltar">Voltar</string>
+    <string name="label_resultado">Seu IMC é de </string>
+    <string name="labelMessageErrorMandatory">O campo {0} deve ser preenchido</string>
+    <string name="label_classificacao">Sua classificação é </string>
+    <string name="label_resultado_teste">Resultado do Teste</string>
+
+    <string name="label_magreza">Magreza</string>
+    <string name="label_normal">Normal</string>
+    <string name="label_sobrepeso">Sobrepeso</string>
+    <string name="label_obesidade">Obesidade</string>
+    <string name="label_obesidade_grave">Obesidade Grave</string>
+</resources>

@@ -4,129 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingLeft="24dp"
+    android:paddingTop="16dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="24dp"
+    >
 
     <TextView
-        android:id="@+id/labelIdade"
-        android:layout_width="320dp"
+        android:id="@+id/labelCalculadoraImc"
+        style="@style/styleTituloSecao"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/label_idade"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <EditText
-        android:id="@+id/editPeso"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal|numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/labelPeso"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/labelPeso"
-        app:layout_constraintTop_toBottomOf="@+id/labelPeso" />
+        android:text="@string/label_calcular_imc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/labelPeso"
-        android:layout_width="320dp"
+        android:id="@+id/labelSexo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_peso"
-        app:layout_constraintEnd_toEndOf="@+id/editAltura"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editAltura"
-        app:layout_constraintTop_toBottomOf="@+id/editAltura" />
-
-    <TextView
-        android:id="@+id/labelAltura"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:text="@string/label_altura"
-        app:layout_constraintEnd_toEndOf="@+id/editIdade"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editIdade"
-        app:layout_constraintTop_toBottomOf="@+id/editIdade" />
+        android:layout_marginTop="16dp"
+        android:text="@string/label_sexo"
+        app:layout_constraintEnd_toEndOf="@+id/labelCalculadoraImc"
+        app:layout_constraintStart_toStartOf="@+id/labelCalculadoraImc"
+        app:layout_constraintTop_toBottomOf="@+id/labelCalculadoraImc" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:checkedButton="@id/radioSexoMasculino"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/labelSexo"
+        app:layout_constraintStart_toStartOf="@+id/labelSexo"
         app:layout_constraintTop_toBottomOf="@+id/labelSexo">
 
         <RadioButton
             android:id="@+id/radioSexoMasculino"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/checkbox_masculino" />
 
         <RadioButton
             android:id="@+id/radioSexoFeminino"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/checkbox_feminino"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="154dp" />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/editAltura"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal|numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/labelAltura"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/labelAltura"
-        app:layout_constraintTop_toBottomOf="@+id/labelAltura" />
 
-    <Button
-        android:id="@+id/btnCalcularImc"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEditIdade"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/botao_calcular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editPeso"
-        app:layout_constraintStart_toStartOf="@+id/editPeso"
-        app:layout_constraintTop_toBottomOf="@+id/editPeso"
-        />
-
-    <EditText
-        android:id="@+id/editIdade"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/labelIdade"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/labelIdade"
-        app:layout_constraintTop_toBottomOf="@+id/labelIdade" />
-
-    <TextView
-        android:id="@+id/labelSexo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/label_sexo"
+        android:layout_marginTop="16dp"
+        android:hint="@string/label_idade"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/labelCalculadoraImc" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        >
 
-    <TextView
-        android:id="@+id/labelCalculadoraImc"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEditAltura"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/label_calcular_imc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:hint="@string/label_altura"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/layoutEditIdade"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/layoutEditIdade"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEditIdade"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEditPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/label_peso"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/layoutEditAltura"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/layoutEditAltura"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEditAltura"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnCalcularImc"
+        style="@style/styleContainedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/botao_calcular"
+        app:layout_constraintEnd_toEndOf="@+id/layoutEditPeso"
+        app:layout_constraintStart_toStartOf="@+id/layoutEditPeso"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEditPeso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

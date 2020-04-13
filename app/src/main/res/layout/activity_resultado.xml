@@ -4,19 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultadoActivity">
+    tools:context=".ResultadoActivity"
+    android:paddingLeft="24dp"
+    android:paddingTop="16dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="24dp"
+    >
+
+    <TextView
+        android:id="@+id/labelTituloResultado"
+        style="@style/styleTituloSecao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_resultado_teste"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/labelResultado"
-        android:layout_width="wrap_content"
+        style="@style/styleHeaderResultado"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/label_resultado"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintEnd_toEndOf="@+id/labelTituloResultado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/labelTituloResultado"
+        app:layout_constraintTop_toBottomOf="@+id/labelTituloResultado" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        style="@style/styleValorResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/labelResultado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/labelResultado"
+        app:layout_constraintTop_toBottomOf="@+id/labelResultado" />
+
+    <TextView
+        android:id="@+id/labelClassificacao"
+        style="@style/styleHeaderResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_classificacao"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultado"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
+
+    <TextView
+        android:id="@+id/textViewClassificacao"
+        style="@style/styleValorResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/labelClassificacao"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/labelClassificacao"
+        app:layout_constraintTop_toBottomOf="@+id/labelClassificacao" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        style="@style/styleContainedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/botao_voltar"
+        app:layout_constraintEnd_toEndOf="@+id/textViewClassificacao"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewClassificacao"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassificacao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

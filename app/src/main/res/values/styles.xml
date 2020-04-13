@@ -1,11 +1,34 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
     </style>
+    
+    <style name="editText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:layout_width">320dp</item>
+    </style>
+
+    <style name="styleHeaderResultado" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textSize">22dp</item>
+    </style>
+
+    <style name="styleValorResultado" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textColor">?attr/colorSecondaryVariant</item>
+    </style>
+
+    <style name="styleContainedButton" parent="@style/Widget.MaterialComponents.Button">
+    </style>
+
+    <style name="styleTituloSecao" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
+
 
 </resources>
